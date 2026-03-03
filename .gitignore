@@ -9,3 +9,13 @@ __pycache__/
 venv/
 .venv/
 .env/
+
+# Environment files anywhere
+.env
+*.env
+
+# Database files
+*.db
+
+# ADK folder
+.adk/
