@@ -1,0 +1,6 @@
+{
+  "event": "Port congestion at Yantian",
+  "predicted_delay_days": 12,
+  "affected_lane": "Shenzhen -> Vancouver -> Toronto",
+  "confidence": 0.8
+}
