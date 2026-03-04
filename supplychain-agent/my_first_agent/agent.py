@@ -34,6 +34,15 @@ def load_alert(path: str = "alert.json") -> Dict[str, Any]:
         return json.load(f)
 
 
+def load_customer_profile(path: str = "data/customer_profile.json") -> Dict[str, Any]:
+    """Load a customer profile JSON containing lanes, critical SKUs, SLA, and risk appetite."""
+    # data/ lives at the repo root (two levels above this file).
+    repo_root = HERE.parent.parent
+    p = repo_root / path
+    with p.open("r", encoding="utf-8") as f:
+        return json.load(f)
+
+
 def compute_stockout_risk(
     on_hand: float,
     daily_demand: float,
@@ -73,8 +82,20 @@ root_agent = Agent(
         "You MUST follow this workflow strictly:\n"
         "1) Call load_erp_snapshot\n"
         "2) Call load_alert\n"
-        "3) Call compute_stockout_risk using the ERP values and the alert's predicted_delay_days, "
+        "3) Call load_customer_profile\n"
+        "4) Call compute_stockout_risk using the ERP values and the alert's predicted_delay_days, "
         "and the 'today' date provided by the user.\n"
+        "\n"
+        "Use the customer profile to personalize your reasoning:\n"
+        "- lanes: strings that represent the customer's lanes/routes and should be compared to the alert's affected_lane.\n"
+        "- critical_skus: SKUs that are especially important for the customer.\n"
+        "- sla_breach_probability_threshold: acceptable sla_breach_probability for this customer.\n"
+        "- risk_appetite: object with cost_weight and service_weight that should guide trade-offs between cost and service.\n"
+        "\n"
+        "If the alert's affected_lane is NOT in the customer profile lanes, you MUST:\n"
+        "- treat the disruption as lower priority in risk_summary.why_it_matters,\n"
+        "- set recommended_plan.chosen_option to \"allocation_or_buffer\",\n"
+        "- and explain in risk_summary.why_it_matters that you are monitoring or using allocation/buffer because the lane is outside the customer's primary lanes.\n"
         "\n"
         "Output MUST be ONLY valid JSON (no markdown, no code fences) with this exact schema:\n"
         "{\n"
@@ -115,6 +136,12 @@ root_agent = Agent(
         "- drafted_actions.exec_summary must contain EXACTLY 5 bullet strings.\n"
         "- risk_summary.sku MUST equal load_erp_snapshot().sku.\n"
         "- All dates and numbers must match compute_stockout_risk output.\n"
+        "- You MUST use load_customer_profile() in your reasoning about the SLA breach probability, which SKUs and lanes matter most, and which mitigation to recommend.\n"
+        "\n"
+        "Human-in-the-loop approval:\n"
+        "- Consider a disruption HIGH-IMPACT if either compute_stockout_risk().gap_days > 0 OR compute_stockout_risk().sla_breach_probability is greater than customer_profile.sla_breach_probability_threshold.\n"
+        "- For every HIGH-IMPACT case, you MUST include as the FIRST item in recommended_plan.steps the exact string: \"Require human approval before sending emails / executing changes.\".\n"
+        "- For non high-impact cases you MUST NOT include that human-approval step.\n"
     ),
-    tools=[load_erp_snapshot, load_alert, compute_stockout_risk],
+    tools=[load_erp_snapshot, load_alert, load_customer_profile, compute_stockout_risk],
 )
