@@ -1,0 +1,16 @@
+{
+  "customer_name": "ACME Electronics",
+  "lanes": [
+    "CN-SHANGHAI -> US-LAX",
+    "MX-MTY -> US-DFW"
+  ],
+  "critical_skus": [
+    "MCU-17",
+    "SENSOR-44"
+  ],
+  "sla_breach_probability_threshold": 0.4,
+  "risk_appetite": {
+    "cost_weight": 0.6,
+    "service_weight": 0.4
+  }
+}

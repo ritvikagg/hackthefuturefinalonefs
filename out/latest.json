@@ -1,0 +1,53 @@
+{
+  "risk_summary": {
+    "sku": "MCU-17",
+    "today": "2025-01-15",
+    "days_to_stockout": 23.81,
+    "projected_stockout_date": "2025-02-08",
+    "original_inbound_eta": "2026-03-20",
+    "new_inbound_eta": "2026-04-01",
+    "gap_days": 417,
+    "sla_breach_probability": 0.7,
+    "why_it_matters": "The SKU MCU-17 is projected to stock out on 2025-02-08, significantly before the new inbound ETA of 2026-04-01, creating a critical gap of 417 days and a high SLA breach probability of 70%."
+  },
+  "mitigations": [
+    {
+      "option": "air_freight",
+      "why": "Air freight can significantly reduce transit time for the delayed inbound shipment, helping to bridge the immediate gap before a stockout occurs.",
+      "estimated_cost_impact": "High (due to premium shipping rates for expedited delivery).",
+      "estimated_service_impact": "Low to Moderate (aims to restore original service levels by expediting critical stock)."
+    },
+    {
+      "option": "reroute",
+      "why": "Rerouting the shipment through an alternative, less congested path might mitigate some of the delay, but could introduce new logistical challenges or costs.",
+      "estimated_cost_impact": "Moderate (depends on the new route, carriers, and any associated fees).",
+      "estimated_service_impact": "Moderate (potential for new delays, increased complexity, or reduced reliability)."
+    },
+    {
+      "option": "allocation_or_buffer",
+      "why": "Utilizing existing buffer stock or reallocating inventory from other regions could cover immediate demand and delay the stockout date.",
+      "estimated_cost_impact": "Low (primarily administrative costs and potential impact on other regions' inventory levels).",
+      "estimated_service_impact": "High (might lead to stockouts or reduced service levels in other regions, or only provide a temporary solution)."
+    }
+  ],
+  "recommended_plan": {
+    "chosen_option": "air_freight",
+    "steps": [
+      "Initiate immediate contact with logistics providers to arrange air freight for a critical quantity of MCU-17.",
+      "Communicate the updated, expedited arrival schedule to internal production and sales teams to manage expectations.",
+      "Collaborate with procurement and suppliers to investigate long-term solutions for supply chain robustness for MCU-17."
+    ],
+    "decision_rationale": "Given the imminent stockout (within 24 days) and a high SLA breach probability (70%), air freight is the most effective and rapid solution to expedite a portion of the delayed inbound shipment and prevent immediate production halts or customer service disruptions."
+  },
+  "drafted_actions": {
+    "supplier_email": "Subject: Urgent: Expedite MCU-17 Shipment (PO #XXXX) - Stockout Risk\n\nDear [Supplier Name],\n\nWe've been alerted to a critical delay for our MCU-17 shipment (PO #XXXX), with a new estimated arrival of 2026-04-01. This delay puts us at a high risk of a stockout by 2025-02-08.\n\nWe urgently request your support in expediting a critical portion of this order via air freight. Please provide options and costs for this accelerated delivery as soon as possible, as our SLA breach probability is 70%.\n\nSincerely,\n[Your Name/Company]",
+    "logistics_email": "Subject: Action Required: Air Freight for MCU-17 (PO #XXXX) - Critical Stockout Risk\n\nDear Logistics Team,\n\nWe have a critical situation with SKU MCU-17. Our current on-hand stock will only last approximately 24 days, with a projected stockout date of 2025-02-08. The inbound shipment (PO #XXXX) is now delayed to 2026-04-01, creating a 417-day gap.\n\nWe need to arrange for air freight for a sufficient quantity of MCU-17 to cover the immediate demand and prevent a stockout. Please assess feasibility, cost, and timelines for this expedited shipment with utmost urgency.\n\nBest regards,\n[Your Name/Company]",
+    "exec_summary": [
+      "SKU MCU-17 faces an immediate and critical stockout risk by 2025-02-08.",
+      "The inbound shipment (PO #XXXX) is delayed by 12 days, pushing its ETA to 2026-04-01.",
+      "This extended delay results in a significant 417-day gap between stockout and new inbound arrival.",
+      "To mitigate the high (70%) SLA breach probability, we recommend air freight for a critical quantity.",
+      "Urgent intervention is required to prevent severe service disruptions and meet customer commitments."
+    ]
+  }
+}
