@@ -8,47 +8,47 @@
     "new_inbound_eta": "2026-03-27",
     "gap_days": 412,
     "sla_breach_probability": 0.7,
-    "why_it_matters": "The SKU MCU-17 is critical for ACME Electronics. While the affected lane ('UNITED STATES OF AMERICA') is not one of ACME's primary lanes, there is a significant projected stockout of 412 gap days, and the SLA breach probability of 0.7 exceeds the customer's threshold of 0.4. We are monitoring this disruption and recommending an allocation/buffer strategy given the lane is outside the customer's primary focus."
+    "why_it_matters": "Despite MCU-17 being a critical SKU for ACME Electronics, the alert's affected lane ('UNITED STATES OF AMERICA') is not one of the customer's primary lanes. Although a stockout is projected by 2025-02-08 with a gap of 412 days before new inbound, and the SLA breach probability is high at 70%, we are currently monitoring the situation and recommending an allocation/buffer strategy due to the disruption being outside primary lanes."
   },
   "mitigations": [
     {
       "option": "air_freight",
-      "why": "Air freight offers the fastest transit to mitigate the delay and avoid stockout entirely, but it comes at a very high cost.",
-      "estimated_cost_impact": "High",
-      "estimated_service_impact": "Low (Fastest resolution)"
+      "why": "Expedited shipping to minimize delay and prevent stockout for critical SKU MCU-17. This option offers the fastest resolution.",
+      "estimated_cost_impact": "High (significant premium over standard freight)",
+      "estimated_service_impact": "Low (minimal impact on delivery schedule)"
     },
     {
       "option": "reroute",
-      "why": "Rerouting the shipment could bypass the affected area, but it might still involve additional transit time and moderate costs. The feasibility depends on alternative routes.",
-      "estimated_cost_impact": "Medium",
-      "estimated_service_impact": "Medium"
+      "why": "Divert inbound shipment through an alternative, unaffected route to bypass the disrupted area. This avoids the Strait of Hormuz related issues.",
+      "estimated_cost_impact": "Medium (potential for increased transit costs and port fees)",
+      "estimated_service_impact": "Medium (may add several days to transit time)"
     },
     {
       "option": "allocation_or_buffer",
-      "why": "This option focuses on managing existing inventory and buffer stock to extend supply, which is a suitable approach when the affected lane is not a primary concern and cost control is prioritized.",
-      "estimated_cost_impact": "Low",
-      "estimated_service_impact": "High (Potential service degradation)"
+      "why": "Utilize existing on-hand inventory and leverage safety stock to cover demand until the delayed inbound shipment arrives. This is a cost-effective approach for managing demand during the delay.",
+      "estimated_cost_impact": "Low (primarily administrative costs)",
+      "estimated_service_impact": "High (risk of stockout if buffer is insufficient or delay extends)"
     }
   ],
   "recommended_plan": {
     "chosen_option": "allocation_or_buffer",
     "steps": [
       "Require human approval before sending emails / executing changes.",
-      "Review current inventory and demand forecasts for MCU-17.",
-      "Implement inventory allocation strategy to prioritize critical needs.",
-      "Communicate potential delays to affected internal teams and customers."
+      "Assess current inventory across all warehouses and prioritize allocation for critical customers like ACME Electronics.",
+      "Communicate with sales and customer service to manage customer expectations for MCU-17.",
+      "Explore internal stock transfer options from other less impacted regions or available safety stock."
     ],
-    "decision_rationale": "Despite MCU-17 being a critical SKU and the high SLA breach probability, the affected lane ('UNITED STATES OF AMERICA') is not part of ACME Electronics' primary lanes. Therefore, an 'allocation_or_buffer' strategy is recommended to manage existing inventory and mitigate risk without incurring high costs associated with expedited freight for a non-primary lane. This approach aligns with ACME's risk appetite which has a higher cost weight (0.6) than service weight (0.4) in this context, prioritizing cost control while monitoring the situation."
+    "decision_rationale": "The disruption's affected lane, 'UNITED STATES OF AMERICA', does not align with ACME Electronics' primary lanes, which are focused on specific international and cross-border routes. While SKU MCU-17 is critical and there is a significant projected stockout and high SLA breach probability, the non-primary lane impact suggests a less aggressive initial mitigation. Therefore, an allocation and buffer strategy is recommended to manage existing inventory and utilize any available buffer stock, allowing for continued monitoring and minimizing unnecessary costs associated with more drastic measures for a non-primary lane disruption."
   },
   "drafted_actions": {
-    "supplier_email": "Subject: Inquiry Regarding MCU-17 Shipment Delay Due to Strait of Hormuz Event\nDear [Supplier Contact Name],\n\nWe have received an alert regarding potential disruptions in global shipping, specifically mentioning the Strait of Hormuz event, which may impact our inbound shipment of MCU-17 (PO: [PO Number, if available]) with an original ETA of 2026-03-20. The predicted delay is 7 days, pushing the new ETA to 2026-03-27.\n\nCould you please confirm the status of our shipment and if it is indeed affected? We are currently assessing the impact on our inventory and would appreciate any information you can provide regarding the revised ETA or potential mitigation options on your end.\n\nPlease let us know if there are any updates.\n\nSincerely,\n[Your Name/ACME Electronics]",
-    "logistics_email": "Subject: Action Required: MCU-17 Stockout Risk & Allocation Strategy\nDear Logistics Team,\n\nThis email is to flag a potential stockout risk for SKU MCU-17, a critical component for ACME Electronics. Due to a disruption alert related to the Strait of Hormuz, our inbound shipment's ETA for MCU-17 has been delayed by 7 days, moving from 2026-03-20 to 2026-03-27.\n\nOur analysis projects a stockout date of 2025-02-08, with a significant gap of 412 days before the delayed inbound arrives. While the affected lane is not one of our primary customer lanes, the SLA breach probability is high (0.7).\n\nOur recommended plan is to implement an allocation/buffer strategy. Please review current inventory levels, demand forecasts, and begin planning for inventory allocation to manage existing stock and prioritize critical needs. We also need to communicate potential delays to affected internal teams. Human approval is required before execution.\n\nPlease confirm receipt and let us know your immediate plan of action.\n\nBest regards,\n[Your Name]",
+    "supplier_email": "Subject: Inquiry Regarding MCU-17 Shipment (PO #XYZ) - Potential Delays\n\nDear [Supplier Contact Name],\n\nWe are writing to follow up on our inbound shipment of MCU-17 (PO #XYZ, original ETA 2026-03-20). We have received information regarding potential disruptions in general shipping lanes affecting transit through the UNITED STATES OF AMERICA. While this lane is not one of our primary routes, MCU-17 is a critical SKU for us.\n\nOur internal analysis projects a potential stockout around 2025-02-08, with a new inbound ETA of 2026-03-27. Can you please confirm if our specific shipment is impacted by these events and provide an updated, confirmed ETA? We would also appreciate information on any available options for expediting this shipment or rerouting it if possible, along with associated costs.\n\nYour prompt attention to this matter is greatly appreciated.\n\nSincerely,\n[Your Name/Company]",
+    "logistics_email": "Subject: Action Required: MCU-17 Stockout Risk & Allocation Strategy\n\nDear Logistics Team,\n\nThis email requires immediate attention. We are facing a potential stockout for critical SKU MCU-17, projected around 2025-02-08, due to a 7-day predicted delay in inbound shipments, shifting the ETA to 2026-03-27. While the affected lane (UNITED STATES OF AMERICA) is not a primary lane for ACME Electronics, MCU-17 is a critical component.\n\nOur recommended plan, pending human approval, is to implement an allocation and buffer strategy. Please immediately:\n1. Assess current on-hand inventory of MCU-17 across all warehouses.\n2. Develop an allocation plan prioritizing ACME Electronics and other critical customers.\n3. Identify any available safety stock or opportunities for internal transfers.\n4. Prepare for potential communication with customers regarding adjusted delivery expectations.\n\nPlease provide an update on inventory status and initial allocation recommendations by end of day today.\n\nThanks,\n[Your Name]",
     "exec_summary": [
-      "Critical Component at Risk: SKU MCU-17, a critical component for ACME Electronics, faces a high risk of stockout due to a 7-day inbound shipment delay caused by the Strait of Hormuz disruption.",
-      "Significant Stockout Projected: The current analysis projects a stockout date of 2025-02-08, leading to a substantial 412-day gap before the delayed inbound shipment arrives.",
-      "High SLA Breach Probability: The disruption results in a 0.7 SLA breach probability, exceeding ACME Electronics' acceptable threshold of 0.4.",
-      "Recommended Strategy - Allocation/Buffer: Despite the high impact, an allocation/buffer strategy is recommended as the affected lane is not one of the customer's primary routes, balancing cost control with service continuity.",
-      "Human Approval Required: Due to the high-impact nature of the disruption (significant gap days and high SLA breach probability), human approval is required before proceeding with the recommended allocation/buffer plan and communication."
+      "Potential stockout for critical SKU MCU-17 projected around 2025-02-08, with a 412-day gap until delayed inbound.",
+      "SLA breach probability is 70% due to a 7-day delay affecting inbound ETA, now 2026-03-27.",
+      "The disruption is in the 'UNITED STATES OF AMERICA' lane, which is not a primary lane for ACME Electronics.",
+      "Recommended action (pending human approval) is an allocation and buffer strategy to manage existing inventory and mitigate risk for this critical SKU.",
+      "Further assessment of current inventory and internal transfer options are underway to manage demand until the delayed shipment arrives."
     ]
   }
 }

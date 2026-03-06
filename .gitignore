@@ -12,6 +12,7 @@ venv/
 
 # Environment files anywhere
 .env
+.env.production
 *.env
 
 # Database files
@@ -19,3 +20,15 @@ venv/
 
 # ADK folder
 .adk/
+
+# Frontend (Astro)
+dist/
+.astro/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# macOS-specific files
+.DS_Store
