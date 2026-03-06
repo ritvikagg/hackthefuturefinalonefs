@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict
 
@@ -94,7 +94,7 @@ def _append_run_log(
         chosen_option = recommended_plan.get("chosen_option")
 
     entry: Dict[str, Any] = {
-        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "alert_used": alert_used,
         "erp_snapshot_used": erp_snapshot_used,
         "risk_summary": risk_summary,

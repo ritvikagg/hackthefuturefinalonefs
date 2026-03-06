@@ -5,49 +5,50 @@
     "days_to_stockout": 23.81,
     "projected_stockout_date": "2025-02-08",
     "original_inbound_eta": "2026-03-20",
-    "new_inbound_eta": "2026-04-01",
-    "gap_days": 417,
+    "new_inbound_eta": "2026-03-27",
+    "gap_days": 412,
     "sla_breach_probability": 0.7,
-    "why_it_matters": "The SKU MCU-17 is projected to stock out on 2025-02-08, significantly before the new inbound ETA of 2026-04-01, creating a critical gap of 417 days and a high SLA breach probability of 70%."
+    "why_it_matters": "The SKU MCU-17 is critical for ACME Electronics. While the affected lane ('UNITED STATES OF AMERICA') is not one of ACME's primary lanes, there is a significant projected stockout of 412 gap days, and the SLA breach probability of 0.7 exceeds the customer's threshold of 0.4. We are monitoring this disruption and recommending an allocation/buffer strategy given the lane is outside the customer's primary focus."
   },
   "mitigations": [
     {
       "option": "air_freight",
-      "why": "Air freight can significantly reduce transit time for the delayed inbound shipment, helping to bridge the immediate gap before a stockout occurs.",
-      "estimated_cost_impact": "High (due to premium shipping rates for expedited delivery).",
-      "estimated_service_impact": "Low to Moderate (aims to restore original service levels by expediting critical stock)."
+      "why": "Air freight offers the fastest transit to mitigate the delay and avoid stockout entirely, but it comes at a very high cost.",
+      "estimated_cost_impact": "High",
+      "estimated_service_impact": "Low (Fastest resolution)"
     },
     {
       "option": "reroute",
-      "why": "Rerouting the shipment through an alternative, less congested path might mitigate some of the delay, but could introduce new logistical challenges or costs.",
-      "estimated_cost_impact": "Moderate (depends on the new route, carriers, and any associated fees).",
-      "estimated_service_impact": "Moderate (potential for new delays, increased complexity, or reduced reliability)."
+      "why": "Rerouting the shipment could bypass the affected area, but it might still involve additional transit time and moderate costs. The feasibility depends on alternative routes.",
+      "estimated_cost_impact": "Medium",
+      "estimated_service_impact": "Medium"
     },
     {
       "option": "allocation_or_buffer",
-      "why": "Utilizing existing buffer stock or reallocating inventory from other regions could cover immediate demand and delay the stockout date.",
-      "estimated_cost_impact": "Low (primarily administrative costs and potential impact on other regions' inventory levels).",
-      "estimated_service_impact": "High (might lead to stockouts or reduced service levels in other regions, or only provide a temporary solution)."
+      "why": "This option focuses on managing existing inventory and buffer stock to extend supply, which is a suitable approach when the affected lane is not a primary concern and cost control is prioritized.",
+      "estimated_cost_impact": "Low",
+      "estimated_service_impact": "High (Potential service degradation)"
     }
   ],
   "recommended_plan": {
-    "chosen_option": "air_freight",
+    "chosen_option": "allocation_or_buffer",
     "steps": [
-      "Initiate immediate contact with logistics providers to arrange air freight for a critical quantity of MCU-17.",
-      "Communicate the updated, expedited arrival schedule to internal production and sales teams to manage expectations.",
-      "Collaborate with procurement and suppliers to investigate long-term solutions for supply chain robustness for MCU-17."
+      "Require human approval before sending emails / executing changes.",
+      "Review current inventory and demand forecasts for MCU-17.",
+      "Implement inventory allocation strategy to prioritize critical needs.",
+      "Communicate potential delays to affected internal teams and customers."
     ],
-    "decision_rationale": "Given the imminent stockout (within 24 days) and a high SLA breach probability (70%), air freight is the most effective and rapid solution to expedite a portion of the delayed inbound shipment and prevent immediate production halts or customer service disruptions."
+    "decision_rationale": "Despite MCU-17 being a critical SKU and the high SLA breach probability, the affected lane ('UNITED STATES OF AMERICA') is not part of ACME Electronics' primary lanes. Therefore, an 'allocation_or_buffer' strategy is recommended to manage existing inventory and mitigate risk without incurring high costs associated with expedited freight for a non-primary lane. This approach aligns with ACME's risk appetite which has a higher cost weight (0.6) than service weight (0.4) in this context, prioritizing cost control while monitoring the situation."
   },
   "drafted_actions": {
-    "supplier_email": "Subject: Urgent: Expedite MCU-17 Shipment (PO #XXXX) - Stockout Risk\n\nDear [Supplier Name],\n\nWe've been alerted to a critical delay for our MCU-17 shipment (PO #XXXX), with a new estimated arrival of 2026-04-01. This delay puts us at a high risk of a stockout by 2025-02-08.\n\nWe urgently request your support in expediting a critical portion of this order via air freight. Please provide options and costs for this accelerated delivery as soon as possible, as our SLA breach probability is 70%.\n\nSincerely,\n[Your Name/Company]",
-    "logistics_email": "Subject: Action Required: Air Freight for MCU-17 (PO #XXXX) - Critical Stockout Risk\n\nDear Logistics Team,\n\nWe have a critical situation with SKU MCU-17. Our current on-hand stock will only last approximately 24 days, with a projected stockout date of 2025-02-08. The inbound shipment (PO #XXXX) is now delayed to 2026-04-01, creating a 417-day gap.\n\nWe need to arrange for air freight for a sufficient quantity of MCU-17 to cover the immediate demand and prevent a stockout. Please assess feasibility, cost, and timelines for this expedited shipment with utmost urgency.\n\nBest regards,\n[Your Name/Company]",
+    "supplier_email": "Subject: Inquiry Regarding MCU-17 Shipment Delay Due to Strait of Hormuz Event\nDear [Supplier Contact Name],\n\nWe have received an alert regarding potential disruptions in global shipping, specifically mentioning the Strait of Hormuz event, which may impact our inbound shipment of MCU-17 (PO: [PO Number, if available]) with an original ETA of 2026-03-20. The predicted delay is 7 days, pushing the new ETA to 2026-03-27.\n\nCould you please confirm the status of our shipment and if it is indeed affected? We are currently assessing the impact on our inventory and would appreciate any information you can provide regarding the revised ETA or potential mitigation options on your end.\n\nPlease let us know if there are any updates.\n\nSincerely,\n[Your Name/ACME Electronics]",
+    "logistics_email": "Subject: Action Required: MCU-17 Stockout Risk & Allocation Strategy\nDear Logistics Team,\n\nThis email is to flag a potential stockout risk for SKU MCU-17, a critical component for ACME Electronics. Due to a disruption alert related to the Strait of Hormuz, our inbound shipment's ETA for MCU-17 has been delayed by 7 days, moving from 2026-03-20 to 2026-03-27.\n\nOur analysis projects a stockout date of 2025-02-08, with a significant gap of 412 days before the delayed inbound arrives. While the affected lane is not one of our primary customer lanes, the SLA breach probability is high (0.7).\n\nOur recommended plan is to implement an allocation/buffer strategy. Please review current inventory levels, demand forecasts, and begin planning for inventory allocation to manage existing stock and prioritize critical needs. We also need to communicate potential delays to affected internal teams. Human approval is required before execution.\n\nPlease confirm receipt and let us know your immediate plan of action.\n\nBest regards,\n[Your Name]",
     "exec_summary": [
-      "SKU MCU-17 faces an immediate and critical stockout risk by 2025-02-08.",
-      "The inbound shipment (PO #XXXX) is delayed by 12 days, pushing its ETA to 2026-04-01.",
-      "This extended delay results in a significant 417-day gap between stockout and new inbound arrival.",
-      "To mitigate the high (70%) SLA breach probability, we recommend air freight for a critical quantity.",
-      "Urgent intervention is required to prevent severe service disruptions and meet customer commitments."
+      "Critical Component at Risk: SKU MCU-17, a critical component for ACME Electronics, faces a high risk of stockout due to a 7-day inbound shipment delay caused by the Strait of Hormuz disruption.",
+      "Significant Stockout Projected: The current analysis projects a stockout date of 2025-02-08, leading to a substantial 412-day gap before the delayed inbound shipment arrives.",
+      "High SLA Breach Probability: The disruption results in a 0.7 SLA breach probability, exceeding ACME Electronics' acceptable threshold of 0.4.",
+      "Recommended Strategy - Allocation/Buffer: Despite the high impact, an allocation/buffer strategy is recommended as the affected lane is not one of the customer's primary routes, balancing cost control with service continuity.",
+      "Human Approval Required: Due to the high-impact nature of the disruption (significant gap days and high SLA breach probability), human approval is required before proceeding with the recommended allocation/buffer plan and communication."
     ]
   }
 }
