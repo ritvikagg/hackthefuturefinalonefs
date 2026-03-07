@@ -1,0 +1,28 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { SITE } from '@data/constants';
+
+const pageTitle: string = `Confidentialite | ${SITE.title}`;
+---
+
+<MainLayout title={pageTitle} lang="fr">
+  <section class="mx-auto max-w-[85rem] px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+    <div class="rounded-4xl border border-[var(--resolv-border)] bg-[var(--resolv-surface)] p-8 md:p-12">
+      <p class="text-sm font-semibold tracking-[0.18em] text-[var(--resolv-muted)]">CONFIDENTIALITE</p>
+      <h1 class="mt-4 text-5xl md:text-6xl">Politique de confidentialite</h1>
+      <div class="mt-6 grid gap-6 text-[var(--resolv-muted)]">
+        <p>
+          Resolv DRS utilise uniquement les donnees operationnelles et les informations fournies
+          par les utilisateurs pour la detection des risques et les recommandations de mitigation.
+        </p>
+        <p>
+          Nous ne vendons pas de donnees personnelles. L'acces a l'historique des workflows et
+          des signaux est reserve aux utilisateurs autorises avec journalisation.
+        </p>
+        <p>
+          Pour toute question, utilisez la <a class="underline" href="/fr/contact">page contact</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</MainLayout>

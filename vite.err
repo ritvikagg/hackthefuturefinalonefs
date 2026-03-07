@@ -1,0 +1,60 @@
+[31m[1m18:04:23[22m [ERROR] [vite][39m [31mInternal server error: Transform failed with 1 error:
+C:/Hackathon/hackthefuture2/src/pages/drs.astro?astro&type=script&index=0&lang.ts:8:103: ERROR: Expected ")" but found "]"[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Hackathon/hackthefuture2/src/pages/drs.astro?astro&type=script&index=0&lang.ts[39m:8:103
+[33m  
+  [33mExpected ")" but found "]"[33m
+  6  |        const q = s => document.querySelector(s);
+  7  |        const tick=q('#tick'),nl=q('#nl'),ns=q('#ns'),chat=q('#chat'),f=q('#f'),i=q('#i'),s=q('#s'),lp=q('#lp'),ls=q('#ls'),rs=q('#rs'),rr=q('#rr'),ra=q('#ra'),rc=q('#rc');
+  8  |        const bars={e:[q('#be'),q('#ve')],n:[q('#bn'),q('#vn')],a:[q('#ba'),q('#va')],l:[q('#bl'),q('#vl']};
+     |                                                                                                         ^
+  9  |        const km=q('#km'),ks=q('#ks'),ka=q('#ka'),kd=q('#kd');
+  10 |        const d=q('#d'),dt=q('#dt'),db=q('#db'),dc=q('#dc'),b=q('#b');
+  [39m
+      at failureErrorWithLog (C:\Hackathon\hackthefuture2\node_modules\astro\node_modules\vite\node_modules\esbuild\lib\main.js:1467:15)
+      at C:\Hackathon\hackthefuture2\node_modules\astro\node_modules\vite\node_modules\esbuild\lib\main.js:736:50
+      at responseCallbacks.<computed> (C:\Hackathon\hackthefuture2\node_modules\astro\node_modules\vite\node_modules\esbuild\lib\main.js:603:9)
+      at handleIncomingPacket (C:\Hackathon\hackthefuture2\node_modules\astro\node_modules\vite\node_modules\esbuild\lib\main.js:658:12)
+      at Socket.readFromStdout (C:\Hackathon\hackthefuture2\node_modules\astro\node_modules\vite\node_modules\esbuild\lib\main.js:581:7)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Readable.push (node:internal/streams/readable:390:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+[31m[1m18:04:25[22m [ERROR] [vite][39m [31mInternal server error: Transform failed with 1 error:
+C:/Hackathon/hackthefuture2/src/pages/drs.astro?astro&type=script&index=0&lang.ts:8:103: ERROR: Expected ")" but found "]"[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Hackathon/hackthefuture2/src/pages/drs.astro?astro&type=script&index=0&lang.ts[39m:8:103
+[33m  
+  [33mExpected ")" but found "]"[33m
+  6  |        const q = s => document.querySelector(s);
+  7  |        const tick=q('#tick'),nl=q('#nl'),ns=q('#ns'),chat=q('#chat'),f=q('#f'),i=q('#i'),s=q('#s'),lp=q('#lp'),ls=q('#ls'),rs=q('#rs'),rr=q('#rr'),ra=q('#ra'),rc=q('#rc');
+  8  |        const bars={e:[q('#be'),q('#ve')],n:[q('#bn'),q('#vn')],a:[q('#ba'),q('#va')],l:[q('#bl'),q('#vl']};
+     |                                                                                                         ^
+  9  |        const km=q('#km'),ks=q('#ks'),ka=q('#ka'),kd=q('#kd');
+  10 |        const d=q('#d'),dt=q('#dt'),db=q('#db'),dc=q('#dc'),b=q('#b');
+  [39m
+      at failureErrorWithLog (C:\Hackathon\hackthefuture2\node_modules\astro\node_modules\vite\node_modules\esbuild\lib\main.js:1467:15)
+      at C:\Hackathon\hackthefuture2\node_modules\astro\node_modules\vite\node_modules\esbuild\lib\main.js:736:50
+      at responseCallbacks.<computed> (C:\Hackathon\hackthefuture2\node_modules\astro\node_modules\vite\node_modules\esbuild\lib\main.js:603:9)
+      at handleIncomingPacket (C:\Hackathon\hackthefuture2\node_modules\astro\node_modules\vite\node_modules\esbuild\lib\main.js:658:12)
+      at Socket.readFromStdout (C:\Hackathon\hackthefuture2\node_modules\astro\node_modules\vite\node_modules\esbuild\lib\main.js:581:7)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Readable.push (node:internal/streams/readable:390:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+[31m[1m19:25:15[22m [ERROR][39m Cannot find module '@components/sections/landing/SupplyChainDisruptionGraphic.astro' imported from 'C:/Hackathon/hackthefuture2/src/pages/index.astro'
+  [1mStack trace:[22m
+[2m    at fetchModule (file:///C:/Hackathon/hackthefuture2/node_modules/astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:46842:19)
+    at fetchModule (file:///C:/Hackathon/hackthefuture2/node_modules/astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:47887:21)
+    at EventEmitter.listenerForInvokeHandler (file:///C:/Hackathon/hackthefuture2/node_modules/astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:39075:25)
+    at Object.send (file:///C:/Hackathon/hackthefuture2/node_modules/astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:25190:40)
+    at Object.invoke (file:///C:/Hackathon/hackthefuture2/node_modules/astro/node_modules/vite/dist/node/module-runner.js:682:34)[22m
+[31m[1m19:27:00[22m [ERROR][39m Cannot find module '@components/sections/landing/SupplyChainDisruptionGraphic.astro' imported from 'C:/Hackathon/hackthefuture2/src/pages/index.astro'
+  [1mStack trace:[22m
+[2m    at fetchModule (file:///C:/Hackathon/hackthefuture2/node_modules/astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:46842:19)
+    at fetchModule (file:///C:/Hackathon/hackthefuture2/node_modules/astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:47887:21)
+    at EventEmitter.listenerForInvokeHandler (file:///C:/Hackathon/hackthefuture2/node_modules/astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:39075:25)
+    at Object.send (file:///C:/Hackathon/hackthefuture2/node_modules/astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:25190:40)
+    at Object.invoke (file:///C:/Hackathon/hackthefuture2/node_modules/astro/node_modules/vite/dist/node/module-runner.js:682:34)[22m

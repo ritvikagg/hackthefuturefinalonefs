@@ -1,0 +1,169 @@
+﻿---
+import MainLayout from '@/layouts/MainLayout.astro';
+import HeroSection from '@components/sections/landing/HeroSection.astro';
+import HeroSectionAlt from '@components/sections/landing/HeroSectionAlt.astro';
+import ClientsSection from '@components/sections/landing/ClientsSection.astro';
+import SupplyChainDisruptionGraphic from '@components/sections/landing/SupplyChainDisruptionGraphic.astro';
+import FeaturesGeneral from '@components/sections/features/FeaturesGeneral.astro';
+import FeaturesNavs from '@components/sections/features/FeaturesNavs.astro';
+import TestimonialsSection from '@components/sections/testimonials/TestimonialsSection.astro';
+import featureImage from '@images/supply-loop.webp';
+import construction from '@images/construction-image.avif';
+import tools from '@images/automated-tools.avif';
+import dashboard from '@images/dashboard-image.avif';
+
+const sourceLogos = [
+  { name: 'Source 01', file: 'asdadasdasdsa.png' },
+  { name: 'Source 02', file: 'cnn.png' },
+  { name: 'Source 03', file: 'dasdasdasasdasdas.png' },
+  { name: 'Source 04', file: 'dasdasdsasadsa.png' },
+  { name: 'Source 05', file: 'asdsadasasad.png' },
+  { name: 'Source 06', file: 'sdadsads.png' },
+];
+
+const partnersData = sourceLogos.map(logo => {
+  const sizeClass =
+    logo.file === 'asdsadasasad.png'
+      ? 'mx-auto h-16 w-auto object-contain sm:h-20 lg:h-24'
+      : 'mx-auto h-12 w-auto object-contain sm:h-14 lg:h-16';
+
+  return {
+    name: logo.name,
+    icon: `<img src="/news/${logo.file}" alt="${logo.name}" class="${sizeClass}" />`,
+  };
+});
+
+const features = [
+  {
+    heading: 'Detection des disruptions en temps reel',
+    content:
+      'Integre les actualites macro, les changements tarifaires, la sante fournisseurs, les retards logistiques et les signaux geopolitiques dans un seul flux.',
+    svg: 'monitor',
+  },
+  {
+    heading: "Score de chiffre d'affaires a risque",
+    content:
+      "Quantifie l'exposition par fournisseur, corridor logistique, famille de composants et impact SLA client avant les disruptions.",
+    svg: 'chart',
+  },
+  {
+    heading: 'Mitigation autonome',
+    content:
+      "Genere des plans de contingence, des alternatives d'approvisionnement et des recommandations actionnables pour les operations.",
+    svg: 'tools',
+  },
+  {
+    heading: 'Decisions explicables',
+    content:
+      'Chaque recommandation inclut un raisonnement trace et un niveau de confiance pour accelerer la validation executive.',
+    svg: 'book',
+  },
+];
+---
+
+<MainLayout lang="fr">
+  <HeroSection
+    title=`Resilience autonome de la chaine d'approvisionnement avec <span class="text-yellow-500 dark:text-yellow-400">Resolv DRS</span>`
+    subTitle="Detectez. Simulez. Mitigez. Executez. Resolv DRS surveille en continu les signaux de disruption et declenche des actions proactives avant le pic d'impact."
+    primaryBtn="Lancer DRS"
+    primaryBtnURL="/drs"
+    secondaryBtn="Explorer la demo"
+    secondaryBtnURL="#"
+    withReview={false}
+  >
+    <SupplyChainDisruptionGraphic slot="heroVisual" />
+  </HeroSection>
+
+  <ClientsSection
+    title="DRS suit les principales sources d'actualites dans plus de 200 pays et plus de 80 langues"
+    subTitle="Surveillance mondiale sur des medias multilingues et des flux regionaux de renseignement."
+    partners={partnersData}
+  />
+
+  <div id="impact">
+    <FeaturesGeneral
+      title="Concu pour les equipes risque confrontees a une volatilite continue"
+      subTitle="Resolv DRS donne aux equipes achats et operations une couche de pilotage commune pour alerte precoce, modelisation d'impact et execution des mitigations."
+      src={featureImage}
+      alt="Vue operations risque Resolv"
+      features={features}
+    />
+  </div>
+
+  <div id="architecture">
+    <FeaturesNavs
+      title={`Comment <span class="text-yellow-500 dark:text-yellow-400">Resolv DRS</span> transforme le signal en action`}
+      tabs={[
+        {
+          heading: 'Perception',
+          content:
+            'Agrege tarifs, actualites, signaux de risque fournisseurs et evenements logistiques dans une chronologie operationnelle unique.',
+          svg: 'tools',
+          src: tools,
+          alt: 'Aggregation de signaux',
+          first: true,
+        },
+        {
+          heading: 'Intelligence risque',
+          content:
+            "Calcule la probabilite de disruption, la variance de lead time et le chiffre d'affaires a risque par ligne produit et geographie.",
+          svg: 'dashboard',
+          src: dashboard,
+          alt: 'Tableau de bord intelligence risque',
+          second: true,
+        },
+        {
+          heading: 'Workflows autonomes',
+          content:
+            "Genere des plans de mitigation, des alternatives fournisseurs et des recommandations pretes a executer pour les equipes terrain.",
+          svg: 'house',
+          src: construction,
+          alt: 'Systeme de workflow de mitigation',
+        },
+      ]}
+    />
+  </div>
+
+  <div id="use-cases">
+    <TestimonialsSection
+      title="Concu pour les decisions industrielles a fort enjeu"
+      subTitle="Resolv DRS aide les equipes a reduire le cout des disruptions et a reagir plus vite sur leurs reseaux fournisseurs."
+      testimonials={[
+        {
+          content:
+            'Resolv DRS a detecte un risque amont plusieurs semaines avant notre processus manuel et a propose des actions de mitigation executables immediatement.',
+          author: 'Responsable Operations',
+          role: 'Helios Industrial Components',
+          avatarSrc:
+            'https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80',
+        },
+      ]}
+      statistics={[
+        {
+          count: '27%',
+          description: 'reduction estimee du cout des disruptions',
+        },
+        {
+          count: '43%',
+          description: 'amelioration du temps de reponse mitigation',
+        },
+        {
+          count: '95%',
+          description: 'couverture sur les corridors fournisseurs critiques',
+        },
+        {
+          count: '24/7',
+          description: 'cycle de monitoring autonome',
+        },
+      ]}
+    />
+  </div>
+
+  <div id="contact">
+    <HeroSectionAlt
+      title="Lancer Resolv DRS"
+      subTitle="Deployeez une resilience autonome pour les achats et la logistique avec une trajectoire de mise en oeuvre adaptee aux industriels mid-market."
+      url="/drs"
+    />
+  </div>
+</MainLayout>

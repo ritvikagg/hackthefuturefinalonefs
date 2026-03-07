@@ -1,0 +1,30 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { SITE } from '@data/constants';
+
+const pageTitle: string = `Entreprise | ${SITE.title}`;
+---
+
+<MainLayout title={pageTitle} lang="fr">
+  <section class="mx-auto max-w-[85rem] px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+    <div class="rounded-4xl border border-[var(--resolv-border)] bg-[var(--resolv-surface)] p-8 md:p-12">
+      <p class="text-sm font-semibold tracking-[0.18em] text-[var(--resolv-muted)]">ENTREPRISE</p>
+      <h1 class="mt-4 text-5xl md:text-6xl">Resolv</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--resolv-muted)]">
+        Resolv cree une plateforme de resolution de decisions pour les equipes operations,
+        achats et risque. DRS aide a detecter les signaux de disruption, evaluer l'impact
+        et executer les mitigations rapidement.
+      </p>
+      <div class="mt-8 grid gap-4 text-[var(--resolv-text)] md:grid-cols-2">
+        <div class="rounded-2xl border border-[var(--resolv-border)] bg-[var(--resolv-card)] p-5">
+          <p class="text-sm text-[var(--resolv-muted)]">Plateforme</p>
+          <p class="mt-1 font-semibold">Resolv DRS (Decision Resolution System)</p>
+        </div>
+        <div class="rounded-2xl border border-[var(--resolv-border)] bg-[var(--resolv-card)] p-5">
+          <p class="text-sm text-[var(--resolv-muted)]">Focus</p>
+          <p class="mt-1 font-semibold">Detection autonome et mitigation des disruptions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

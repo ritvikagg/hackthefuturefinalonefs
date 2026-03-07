@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import supplyChainLight from './asdasdasdasdasdad.png';
+import supplyChainDark from './asdsadsadasdasdasdasdasd.png';
+
+const { class: className = '' } = Astro.props;
+
+interface Props {
+  class?: string;
+}
+---
+
+<div class={`mx-auto w-full max-w-[28rem] sm:max-w-[30rem] lg:max-w-[34rem] ${className}`}>
+  <Image
+    src={supplyChainLight}
+    alt="Supply chain route graphic"
+    class="block h-auto w-full object-contain dark:hidden"
+    draggable={false}
+    loading="eager"
+  />
+  <Image
+    src={supplyChainDark}
+    alt="Supply chain route graphic"
+    class="hidden h-auto w-full object-contain dark:block"
+    draggable={false}
+    loading="eager"
+  />
+</div>

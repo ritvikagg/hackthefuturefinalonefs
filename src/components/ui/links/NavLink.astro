@@ -1,0 +1,51 @@
+---
+// Destructure the properties from Astro.props
+const { url, name } = Astro.props;
+
+// Define TypeScript interface for the properties
+interface Props {
+  url: string;
+  name: string;
+}
+---
+
+{
+  /*
+Re-usable link component for navigation bar. Highlights the active link
+by comparing the current URL with the href of each link.
+We assign an ID matching the URL for easy reference in our script.
+If URL is '/' (home page), assign ID as 'home' 
+*/
+}
+<a
+  id={url === '/' ? 'home' : url.replace('/', '')}
+  href={url}
+  data-astro-prefetch
+  class="rounded-lg px-1 text-base font-medium text-[var(--resolv-muted)] ring-zinc-500 outline-hidden transition hover:text-[var(--resolv-text)] focus-visible:ring-3 md:py-3 md:text-[1.08rem] 2xl:text-base dark:ring-zinc-200 dark:focus:outline-hidden"
+>
+  {name}
+</a>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let url = window.location.pathname;
+    let navId;
+
+    if (url === '/') {
+      navId = 'home';
+    } else {
+      navId = url.replace('/', '');
+    }
+
+    let nav = document.getElementById(navId);
+
+    if (nav) {
+      nav.classList.remove(
+        'text-[var(--resolv-muted)]',
+        'hover:text-[var(--resolv-text)]'
+      );
+      nav.classList.add('text-[var(--resolv-accent)]', 'font-semibold');
+      nav.setAttribute('aria-current', 'page');
+    }
+  });
+</script>

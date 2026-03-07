@@ -1,0 +1,118 @@
+---
+// Import the necessary dependencies
+import { Image } from 'astro:assets';
+import PrimaryCTA from '@components/ui/buttons/PrimaryCTA.astro';
+import SecondaryCTA from '@components/ui/buttons/SecondaryCTA.astro';
+import ReviewComponent from '@components/ui/blocks/ReviewComponent.astro';
+
+// Define props from Astro
+const {
+  title,
+  subTitle,
+  primaryBtn,
+  primaryBtnURL,
+  secondaryBtn,
+  secondaryBtnURL,
+  withReview,
+  avatars,
+  starCount,
+  rating,
+  reviews,
+  src,
+  alt,
+} = Astro.props;
+const hasHeroVisualSlot = Astro.slots.has('heroVisual');
+
+// Define TypeScript interface for props
+interface Props {
+  title: string;
+  subTitle?: string;
+  primaryBtn?: string;
+  primaryBtnURL?: string;
+  secondaryBtn?: string;
+  secondaryBtnURL?: string;
+  withReview?: boolean;
+  avatars?: Array<string>;
+  starCount?: number;
+  rating?: string;
+  reviews?: string;
+  src?: any;
+  alt?: string;
+}
+---
+
+{/* Defining a grid container that holds all the content */}
+<section
+  class="mx-auto grid max-w-[85rem] gap-8 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-12 lg:px-8 lg:py-20 2xl:max-w-full"
+>
+  {/* Title and description */}
+  <div>
+    {
+      /* Each h1 and p tag renders a portion of the title and subTitle defined above */
+    }
+    <h1
+      class="block text-5xl leading-[0.94] tracking-tight text-balance text-[var(--resolv-text)] sm:text-6xl lg:text-8xl"
+    >
+      {
+        /* About Fragment: https://docs.astro.build/en/basics/astro-syntax/#fragments */
+      }
+      <Fragment set:html={title} />
+    </h1>
+    {
+      subTitle && (
+        <p class="mt-6 text-xl leading-relaxed text-pretty text-[var(--resolv-muted)] lg:w-5/6">
+          {subTitle}
+        </p>
+      )
+    }
+    {
+      /* Action Button Section: This section includes two CTAs with their own styles and URL */
+    }
+    <div class="mt-10 grid w-full gap-4 sm:inline-flex">
+      {primaryBtn && <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />}
+      {
+        secondaryBtn && (
+          <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />
+        )
+      }
+    </div>
+
+    {
+      /* Review Section: This section presents avatars, review ratings and the number of reviews */
+    }
+    {
+      withReview ? (
+        <ReviewComponent
+          avatars={avatars}
+          starCount={starCount}
+          rating={rating}
+          reviews={reviews}
+        />
+      ) : (
+        ''
+      )
+    }
+  </div>
+  {/* Hero Image Section */}
+  <div class="flex w-full md:justify-end">
+    <div class="top-12 overflow-hidden rounded-4xl border border-[var(--resolv-border)] bg-[var(--resolv-card)] p-4 shadow-[0_30px_60px_-45px_rgba(18,56,37,0.45)] md:p-6">
+      {
+        hasHeroVisualSlot ? (
+          <slot name="heroVisual" />
+        ) : (
+          src &&
+          alt && (
+            <Image
+              src={src}
+              alt={alt}
+              class="h-full w-full scale-110 object-cover object-center"
+              draggable={'false'}
+              loading={'eager'}
+              format={'avif'}
+            />
+          )
+        )
+      }
+    </div>
+  </div>
+</section>

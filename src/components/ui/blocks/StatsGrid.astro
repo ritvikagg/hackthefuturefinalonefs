@@ -1,0 +1,23 @@
+---
+import Icon from '@components/ui/icons/Icon.astro';
+
+const { count, description, index } = Astro.props;
+
+interface Props {
+  count: string;
+  description: string;
+  index: number;
+}
+---
+
+<li class="-m-0.5 flex flex-col border-[var(--resolv-border)] p-5 sm:p-8 odd:border-r even:border-r-0 [&:nth-child(-n+2)]:border-b">
+  <div
+    class="mb-2 flex items-end gap-x-2 text-4xl font-semibold text-[var(--resolv-text)] sm:text-5xl"
+  >
+    {index === 1 || index === 2 ? <Icon name="arrowUp" /> : null}
+    {count}
+  </div>
+  <p class="text-sm text-[var(--resolv-muted)] sm:text-base">
+    {description}
+  </p>
+</li>

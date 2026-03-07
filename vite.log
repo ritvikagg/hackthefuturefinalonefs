@@ -1,0 +1,371 @@
+
+> screwfast-template@0.0.1 dev
+> astro dev --host 0.0.0.0 --port 5173
+
+[2m17:19:11[22m [34m[types][39m Generated [2m1ms[22m
+[2m17:19:12[22m [34m[content][39m Syncing content
+[2m17:19:12[22m [34m[content][39m Synced content
+[2m17:19:12[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+
+[42m[1m astro [22m[49m [32mv5.18.0[39m [2mready in[22m 2253 [2mms[22m
+
+[2m┃[22m Local    [36mhttp://localhost:5173/[39m
+[2m┃[22m Network  [36mhttp://10.0.0.208:5173/[39m
+
+[2m17:19:12[22m [32mwatching for file changes...[39m
+[2m17:19:53[22m [34m[200][39m / [2m575ms[22m
+[2m17:21:37[22m [34m[watch][39m src/components/sections/navbar&footer/Navbar.astro
+[2m17:21:37[22m [34m[watch][39m src/components/sections/navbar&footer/Navbar.astro
+[2m17:21:38[22m [34m[200][39m / [2m188ms[22m
+[2m17:21:55[22m [34m[watch][39m src/pages/index.astro
+[2m17:21:55[22m [34m[watch][39m src/pages/index.astro
+[2m17:21:56[22m [34m[200][39m / [2m130ms[22m
+[2m17:22:17[22m [34m[200][39m / [2m15ms[22m
+[2m17:22:28[22m [34m[200][39m / [2m13ms[22m
+[2m17:26:52[22m [34m[watch][39m src/utils/navigation.ts
+[2m17:26:52[22m [34m[watch][39m src/utils/navigation.ts
+[2m17:26:53[22m [34m[200][39m / [2m120ms[22m
+[2m17:27:08[22m [34m[watch][39m src/utils/fr/navigation.ts
+[2m17:27:08[22m [34m[watch][39m src/utils/fr/navigation.ts
+[2m17:27:08[22m [34m[200][39m / [2m146ms[22m
+[2m17:27:29[22m [34m[200][39m / [2m16ms[22m
+[2m17:27:54[22m [34m[watch][39m src/utils/navigation.ts
+[2m17:27:54[22m [34m[watch][39m src/utils/navigation.ts
+[2m17:27:54[22m [34m[200][39m / [2m141ms[22m
+[2m17:27:57[22m [34m[200][39m / [2m11ms[22m
+[2m17:28:13[22m [34m[watch][39m src/utils/fr/navigation.ts
+[2m17:28:13[22m [34m[watch][39m src/utils/fr/navigation.ts
+[2m17:28:14[22m [34m[200][39m / [2m102ms[22m
+[2m17:28:34[22m [34m[200][39m / [2m10ms[22m
+[2m17:28:45[22m [34m[200][39m / [2m10ms[22m
+[2m17:42:12[22m [34m[watch][39m src/pages/index.astro
+[2m17:42:12[22m [34m[watch][39m src/pages/index.astro
+[2m17:42:14[22m [34m[200][39m / [2m136ms[22m
+[33m[1m17:42:14[22m [WARN] [router][39m A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/news/asdsadasasad.png`.
+
+Possible dynamic routes being matched: node_modules/@astrojs/starlight/routes/static/index.astro.
+[2m17:42:14[22m [33m[404][39m /news/asdsadasasad.png [2m9ms[22m
+[33m[1m17:42:15[22m [WARN] [router][39m A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/news/asdsadasasad.png`.
+
+Possible dynamic routes being matched: node_modules/@astrojs/starlight/routes/static/index.astro.
+[2m17:42:15[22m [33m[404][39m /news/asdsadasasad.png [2m5ms[22m
+[2m17:46:15[22m [34m[200][39m / [2m16ms[22m
+[2m17:47:15[22m [34m[200][39m / [2m10ms[22m
+[2m17:47:26[22m [34m[200][39m / [2m12ms[22m
+[2m17:49:48[22m [34m[200][39m / [2m9ms[22m
+[2m17:49:50[22m [34m[200][39m /drs [2m7ms[22m
+[2m17:52:11[22m [34m[200][39m /drs [2m7ms[22m
+[2m17:55:54[22m [34m[watch][39m src/pages/drs.astro
+[33m[1m17:55:55[22m [WARN] [router][39m A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/drs`.
+
+Possible dynamic routes being matched: node_modules/@astrojs/starlight/routes/static/index.astro.
+[2m17:55:55[22m [33m[404][39m /drs [2m8ms[22m
+[2m18:04:23[22m [34m[watch][39m src/pages/drs.astro
+[2m18:04:23[22m [34m[200][39m /drs [2m4ms[22m
+[2m18:04:24[22m [34m[watch][39m vite.err
+[2m18:04:24[22m [34m[watch][39m vite.err
+[2m18:04:25[22m [34m[200][39m /drs [2m143ms[22m
+[2m18:04:26[22m [34m[watch][39m vite.err
+[2m18:04:26[22m [34m[watch][39m vite.err
+[2m18:06:53[22m [34m[watch][39m src/pages/drs.astro
+[2m18:06:53[22m [34m[watch][39m src/pages/drs.astro
+[2m18:06:55[22m [34m[200][39m /drs [2m116ms[22m
+[2m18:08:01[22m [34m[200][39m /drs [2m4ms[22m
+[2m18:08:12[22m [34m[200][39m /drs [2m4ms[22m
+[2m18:08:58[22m [34m[watch][39m src/pages/drs.astro
+[2m18:08:58[22m [34m[watch][39m src/pages/drs.astro
+[2m18:08:59[22m [34m[200][39m /drs [2m105ms[22m
+[2m18:09:21[22m [34m[200][39m /drs [2m3ms[22m
+[2m18:09:32[22m [34m[200][39m /drs [2m4ms[22m
+[2m18:40:21[22m [34m[200][39m /drs [2m4ms[22m
+[2m18:53:37[22m [34m[watch][39m src/pages/drs.astro
+[2m18:53:37[22m [34m[watch][39m src/pages/drs.astro
+[33m[1m18:53:38[22m [WARN] [router][39m A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/drs`.
+
+Possible dynamic routes being matched: node_modules/@astrojs/starlight/routes/static/index.astro.
+[2m18:53:39[22m [33m[404][39m /drs [2m113ms[22m
+[2m19:02:48[22m [34m[watch][39m src/pages/drs.astro
+[2m19:02:48[22m [34m[watch][39m src/pages/drs.astro
+[2m19:02:49[22m [34m[200][39m /drs [2m132ms[22m
+[2m19:03:15[22m [34m[watch][39m src/pages/drs.astro
+[2m19:03:15[22m [34m[watch][39m src/pages/drs.astro
+[2m19:03:16[22m [34m[200][39m /drs [2m166ms[22m
+[2m19:03:50[22m [34m[watch][39m src/pages/drs.astro
+[2m19:03:50[22m [34m[watch][39m src/pages/drs.astro
+[2m19:03:51[22m [34m[200][39m /drs [2m120ms[22m
+[2m19:04:30[22m [34m[watch][39m src/pages/drs.astro
+[2m19:04:30[22m [34m[watch][39m src/pages/drs.astro
+[2m19:04:32[22m [34m[200][39m /drs [2m111ms[22m
+[2m19:05:12[22m [34m[watch][39m src/pages/drs.astro
+[2m19:05:12[22m [34m[watch][39m src/pages/drs.astro
+[2m19:05:14[22m [34m[200][39m /drs [2m113ms[22m
+[2m19:05:29[22m [34m[watch][39m .env.example
+[2m19:05:29[22m [34m[watch][39m .env.example
+[2m19:05:31[22m [34m[200][39m /drs [2m140ms[22m
+[2m19:05:35[22m [34m[watch][39m README.md
+[2m19:05:35[22m [34m[watch][39m README.md
+[2m19:05:36[22m [34m[200][39m /drs [2m131ms[22m
+[2m19:05:52[22m [34m[200][39m /drs [2m5ms[22m
+[2m19:06:06[22m [34m[200][39m /drs [2m6ms[22m
+[2m19:07:57[22m [34m[200][39m /drs [2m5ms[22m
+[2m19:10:28[22m [34m[200][39m /drs [2m5ms[22m
+[2m19:16:46[22m [34m[200][39m /drs [2m3ms[22m
+[2m19:17:59[22m [34m[watch][39m src/components/sections/landing/HeroSection.astro
+[2m19:17:59[22m [34m[watch][39m src/components/sections/landing/HeroSection.astro
+[2m19:18:00[22m [34m[200][39m /drs [2m132ms[22m
+[2m19:18:13[22m [34m[watch][39m src/pages/index.astro
+[2m19:18:13[22m [34m[watch][39m src/pages/index.astro
+[2m19:18:14[22m [34m[200][39m /drs [2m105ms[22m
+[2m19:18:33[22m [34m[200][39m /drs [2m7ms[22m
+[2m19:18:46[22m [34m[200][39m /drs [2m4ms[22m
+[2m19:21:56[22m [34m[200][39m / [2m16ms[22m
+[2m19:22:10[22m [34m[watch][39m src/pages/drs.astro
+[2m19:22:10[22m [34m[watch][39m src/pages/drs.astro
+[2m19:22:11[22m [34m[200][39m / [2m123ms[22m
+[2m19:25:13[22m [34m[watch][39m src/components/sections/landing/SupplyChainDisruptionGraphic.astro
+[2m19:25:13[22m [34m[watch][39m src/components/sections/landing/SupplyChainDisruptionGraphic.astro
+[2m19:26:59[22m [34m[watch][39m src/components/sections/landing/SupplyChainDisruptionGraphic.astro
+[2m19:26:59[22m [34m[watch][39m src/components/sections/landing/SupplyChainDisruptionGraphic.astro
+[2m19:27:00[22m [34m[watch][39m vite.err
+[2m19:27:00[22m [34m[watch][39m vite.err
+[2m19:27:13[22m [34m[watch][39m vite.err
+[2m19:27:13[22m [34m[watch][39m vite.err
+[2m19:27:14[22m [34m[200][39m / [2m186ms[22m
+[2m19:27:15[22m [34m[200][39m /_image [2m445ms[22m
+[2m19:27:15[22m [34m[200][39m /_image [2m316ms[22m
+[2m19:27:26[22m [34m[200][39m / [2m11ms[22m
+[2m19:28:14[22m [34m[watch][39m src/pages/drs.astro
+[2m19:28:14[22m [34m[watch][39m src/pages/drs.astro
+[2m19:28:15[22m [34m[200][39m / [2m155ms[22m
+[2m19:28:55[22m [34m[watch][39m src/pages/drs.astro
+[2m19:28:55[22m [34m[watch][39m src/pages/drs.astro
+[2m19:28:56[22m [34m[200][39m / [2m177ms[22m
+[2m19:29:39[22m [34m[watch][39m src/components/sections/landing/SupplyChainDisruptionGraphic.astro
+[2m19:29:39[22m [34m[watch][39m src/components/sections/landing/SupplyChainDisruptionGraphic.astro
+[2m19:29:39[22m [34m[200][39m / [2m121ms[22m
+[2m19:29:43[22m [34m[watch][39m src/pages/drs.astro
+[2m19:29:43[22m [34m[watch][39m src/pages/drs.astro
+[2m19:29:44[22m [34m[200][39m / [2m129ms[22m
+[2m19:29:50[22m [34m[200][39m / [2m11ms[22m
+[2m19:29:59[22m [34m[200][39m / [2m11ms[22m
+[2m19:30:02[22m [34m[200][39m / [2m13ms[22m
+[2m19:30:15[22m [34m[200][39m / [2m12ms[22m
+[2m19:30:33[22m [34m[200][39m / [2m10ms[22m
+[2m19:31:09[22m [34m[watch][39m src/pages/drs.astro
+[2m19:31:09[22m [34m[watch][39m src/pages/drs.astro
+[2m19:31:10[22m [34m[200][39m / [2m116ms[22m
+[2m19:31:10[22m [34m[200][39m / [2m15ms[22m
+[2m19:31:12[22m [34m[200][39m / [2m17ms[22m
+[2m19:31:18[22m [34m[200][39m / [2m11ms[22m
+[2m19:31:19[22m [34m[200][39m / [2m9ms[22m
+[2m19:31:19[22m [34m[200][39m / [2m12ms[22m
+[2m19:31:21[22m [34m[watch][39m src/components/sections/landing/ClientsSection.astro
+[2m19:31:21[22m [34m[watch][39m src/components/sections/landing/ClientsSection.astro
+[2m19:31:22[22m [34m[200][39m / [2m132ms[22m
+[2m19:31:22[22m [34m[200][39m / [2m21ms[22m
+[2m19:31:22[22m [34m[200][39m / [2m19ms[22m
+[2m19:31:26[22m [34m[watch][39m src/pages/index.astro
+[2m19:31:26[22m [34m[watch][39m src/pages/index.astro
+[2m19:31:26[22m [34m[200][39m / [2m131ms[22m
+[2m19:31:26[22m [34m[200][39m / [2m12ms[22m
+[2m19:31:26[22m [34m[200][39m / [2m20ms[22m
+[2m19:31:37[22m [34m[200][39m / [2m10ms[22m
+[2m19:31:37[22m [34m[200][39m / [2m15ms[22m
+[2m19:31:37[22m [34m[200][39m / [2m19ms[22m
+[2m19:31:51[22m [34m[200][39m / [2m25ms[22m
+[2m19:31:51[22m [34m[200][39m / [2m24ms[22m
+[2m19:31:51[22m [34m[200][39m / [2m71ms[22m
+[2m19:32:00[22m [34m[200][39m /drs [2m4ms[22m
+[2m19:37:49[22m [34m[watch][39m src/pages/drs.astro
+[2m19:37:49[22m [34m[watch][39m src/pages/drs.astro
+[2m19:37:50[22m [34m[200][39m /drs [2m146ms[22m
+[2m19:37:50[22m [34m[200][39m / [2m157ms[22m
+[2m19:37:50[22m [34m[200][39m / [2m21ms[22m
+[2m19:37:57[22m [34m[watch][39m src/pages/drs.astro
+[2m19:37:57[22m [34m[watch][39m src/pages/drs.astro
+[2m19:37:58[22m [34m[200][39m /drs [2m111ms[22m
+[2m19:37:58[22m [34m[200][39m / [2m118ms[22m
+[2m19:37:58[22m [34m[200][39m / [2m12ms[22m
+[2m19:38:02[22m [34m[watch][39m src/pages/drs.astro
+[2m19:38:02[22m [34m[watch][39m src/pages/drs.astro
+[2m19:38:02[22m [34m[200][39m /drs [2m107ms[22m
+[2m19:38:02[22m [34m[200][39m / [2m114ms[22m
+[2m19:38:02[22m [34m[200][39m / [2m11ms[22m
+[2m19:38:14[22m [34m[200][39m /drs [2m12ms[22m
+[2m19:38:14[22m [34m[200][39m / [2m24ms[22m
+[2m19:38:14[22m [34m[200][39m / [2m21ms[22m
+[2m19:38:32[22m [34m[200][39m /drs [2m8ms[22m
+[2m19:38:32[22m [34m[200][39m / [2m21ms[22m
+[2m19:38:32[22m [34m[200][39m / [2m16ms[22m
+[2m19:38:45[22m [34m[200][39m / [2m16ms[22m
+[2m19:38:46[22m [34m[200][39m / [2m13ms[22m
+[2m19:38:46[22m [34m[200][39m /drs [2m9ms[22m
+[2m19:39:35[22m [34m[watch][39m src/components/sections/landing/SupplyChainDisruptionGraphic.astro
+[2m19:39:35[22m [34m[watch][39m src/components/sections/landing/SupplyChainDisruptionGraphic.astro
+[2m19:39:35[22m [34m[200][39m /drs [2m136ms[22m
+[2m19:39:35[22m [34m[200][39m / [2m145ms[22m
+[2m19:39:35[22m [34m[200][39m / [2m14ms[22m
+[2m19:39:36[22m [34m[200][39m /_image [2m80ms[22m
+[2m19:39:55[22m [34m[200][39m /drs [2m7ms[22m
+[2m19:39:55[22m [34m[200][39m / [2m17ms[22m
+[2m19:39:55[22m [34m[200][39m / [2m27ms[22m
+[2m19:40:08[22m [34m[200][39m /drs [2m8ms[22m
+[2m19:40:08[22m [34m[200][39m / [2m19ms[22m
+[2m19:40:08[22m [34m[200][39m / [2m28ms[22m
+[2m19:41:07[22m [34m[200][39m / [2m8ms[22m
+[2m19:41:52[22m [34m[200][39m /drs [2m4ms[22m
+[2m19:43:09[22m [34m[watch][39m src/components/sections/landing/SupplyChainDisruptionGraphic.astro
+[2m19:43:09[22m [34m[watch][39m src/components/sections/landing/SupplyChainDisruptionGraphic.astro
+[2m19:43:09[22m [34m[200][39m /drs [2m136ms[22m
+[2m19:43:09[22m [34m[200][39m / [2m146ms[22m
+[2m19:43:09[22m [34m[200][39m /drs [2m5ms[22m
+[2m19:43:11[22m [34m[watch][39m src/pages/index.astro
+[2m19:43:11[22m [34m[watch][39m src/pages/index.astro
+[2m19:43:12[22m [34m[200][39m /drs [2m126ms[22m
+[2m19:43:12[22m [34m[200][39m / [2m136ms[22m
+[2m19:43:12[22m [34m[200][39m /drs [2m9ms[22m
+[2m19:43:13[22m [34m[200][39m /_image [2m231ms[22m
+[2m19:43:33[22m [34m[200][39m /drs [2m4ms[22m
+[2m19:43:33[22m [34m[200][39m / [2m21ms[22m
+[2m19:43:33[22m [34m[200][39m /drs [2m8ms[22m
+[2m19:43:46[22m [34m[200][39m /drs [2m5ms[22m
+[2m19:43:47[22m [34m[200][39m /drs [2m6ms[22m
+[2m19:43:47[22m [34m[200][39m / [2m19ms[22m
+[2m19:44:17[22m [34m[200][39m /drs [2m7ms[22m
+[2m19:44:18[22m [34m[200][39m /drs [2m4ms[22m
+[2m19:44:18[22m [34m[200][39m / [2m14ms[22m
+[2m19:46:32[22m [34m[watch][39m src/pages/drs.astro
+[2m19:46:32[22m [34m[watch][39m src/pages/drs.astro
+[2m19:46:33[22m [34m[200][39m /drs [2m121ms[22m
+[2m19:46:33[22m [34m[200][39m / [2m132ms[22m
+[2m19:46:33[22m [34m[200][39m / [2m16ms[22m
+[2m19:46:45[22m [34m[watch][39m src/pages/drs.astro
+[2m19:46:45[22m [34m[watch][39m src/pages/drs.astro
+[2m19:46:45[22m [34m[200][39m / [2m163ms[22m
+[2m19:46:45[22m [34m[200][39m / [2m13ms[22m
+[2m19:46:45[22m [34m[200][39m /drs [2m5ms[22m
+[2m19:46:49[22m [34m[watch][39m src/components/sections/features/FeaturesGeneral.astro
+[2m19:46:49[22m [34m[watch][39m src/components/sections/features/FeaturesGeneral.astro
+[2m19:46:50[22m [34m[200][39m / [2m132ms[22m
+[2m19:46:50[22m [34m[200][39m / [2m8ms[22m
+[2m19:46:50[22m [34m[200][39m /drs [2m4ms[22m
+[2m19:47:03[22m [34m[watch][39m src/pages/drs.astro
+[2m19:47:03[22m [34m[watch][39m src/pages/drs.astro
+[2m19:47:04[22m [34m[200][39m /drs [2m142ms[22m
+[2m19:47:04[22m [34m[200][39m / [2m152ms[22m
+[2m19:47:04[22m [34m[200][39m / [2m17ms[22m
+[2m19:47:13[22m [34m[watch][39m src/components/sections/features/FeaturesGeneral.astro
+[2m19:47:13[22m [34m[watch][39m src/components/sections/features/FeaturesGeneral.astro
+[2m19:47:14[22m [34m[200][39m /drs [2m136ms[22m
+[2m19:47:14[22m [34m[200][39m / [2m145ms[22m
+[2m19:47:14[22m [34m[200][39m / [2m14ms[22m
+[2m19:47:22[22m [34m[watch][39m src/pages/drs.astro
+[2m19:47:22[22m [34m[watch][39m src/pages/drs.astro
+[2m19:47:22[22m [34m[200][39m /drs [2m111ms[22m
+[2m19:47:22[22m [34m[200][39m / [2m120ms[22m
+[2m19:47:22[22m [34m[200][39m / [2m13ms[22m
+[2m19:47:25[22m [34m[watch][39m src/pages/drs.astro
+[2m19:47:25[22m [34m[watch][39m src/pages/drs.astro
+[2m19:47:26[22m [34m[200][39m /drs [2m135ms[22m
+[2m19:47:26[22m [34m[200][39m / [2m144ms[22m
+[2m19:47:26[22m [34m[200][39m / [2m15ms[22m
+[2m19:47:41[22m [34m[200][39m / [2m14ms[22m
+[2m19:47:42[22m [34m[200][39m /drs [2m6ms[22m
+[2m19:47:42[22m [34m[200][39m / [2m14ms[22m
+[2m19:47:57[22m [34m[200][39m /drs [2m4ms[22m
+[2m19:47:57[22m [34m[200][39m / [2m24ms[22m
+[2m19:47:57[22m [34m[200][39m / [2m13ms[22m
+[2m19:48:04[22m [34m[200][39m /drs [2m9ms[22m
+[2m19:48:04[22m [34m[200][39m / [2m20ms[22m
+[2m19:48:04[22m [34m[200][39m / [2m23ms[22m
+[2m19:48:20[22m [34m[200][39m / [2m23ms[22m
+[2m19:48:20[22m [34m[200][39m /drs [2m7ms[22m
+[2m19:48:20[22m [34m[200][39m / [2m25ms[22m
+[2m19:49:24[22m [34m[200][39m /fr/ [2m19ms[22m
+[2m19:49:24[22m [34m[200][39m /_image [2m226ms[22m
+[2m19:49:24[22m [34m[200][39m /_image [2m237ms[22m
+[2m19:49:24[22m [34m[200][39m /_image [2m233ms[22m
+[2m19:49:24[22m [34m[200][39m /_image [2m210ms[22m
+[2m19:49:32[22m [34m[200][39m / [2m10ms[22m
+[2m19:49:33[22m Configuration file updated. Restarting...
+[2m19:49:33[22m [34m[watch][39m astro.config.mjs
+[2m19:49:33[22m [34m[watch][39m astro.config.mjs
+[2m19:49:34[22m [34m[200][39m /drs [2m12ms[22m
+[2m19:49:34[22m [34m[200][39m / [2m272ms[22m
+[2m19:49:34[22m [34m[200][39m / [2m19ms[22m
+[2m19:49:35[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m19:49:36[22m [34m[content][39m Syncing content
+[2m19:49:36[22m [34m[content][39m Astro config changed
+[2m19:49:36[22m [34m[content][39m Clearing content store
+[2m19:49:36[22m [34m[content][39m Synced content
+[2m19:49:36[22m [34m[types][39m Generated [2m1.12s[22m
+[2m19:49:36[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m19:49:42[22m [34m[200][39m /fr/ [2m405ms[22m
+[2m19:49:47[22m [34m[watch][39m src/pages/drs.astro
+[2m19:49:47[22m [34m[watch][39m src/pages/drs.astro
+[2m19:49:48[22m [34m[200][39m /fr/ [2m178ms[22m
+[2m19:49:58[22m [34m[watch][39m src/pages/drs.astro
+[2m19:49:58[22m [34m[watch][39m src/pages/drs.astro
+[2m19:49:59[22m [34m[200][39m /fr/ [2m167ms[22m
+[2m19:50:01[22m [34m[200][39m / [2m19ms[22m
+[2m19:50:09[22m [34m[200][39m / [2m12ms[22m
+[2m19:54:35[22m [34m[200][39m / [2m11ms[22m
+[2m19:54:36[22m [34m[200][39m /drs [2m3ms[22m
+[2m19:54:55[22m [34m[watch][39m src/pages/fr/index.astro
+[2m19:54:55[22m [34m[watch][39m src/pages/fr/index.astro
+[2m19:54:55[22m [34m[200][39m /drs [2m141ms[22m
+[2m19:55:06[22m [34m[watch][39m src/utils/fr/navigation.ts
+[2m19:55:06[22m [34m[watch][39m src/utils/fr/navigation.ts
+[2m19:55:07[22m [34m[200][39m /drs [2m120ms[22m
+[2m19:55:32[22m [34m[200][39m /drs [2m5ms[22m
+[2m19:58:07[22m [34m[watch][39m src/pages/drs.astro
+[2m19:58:07[22m [34m[watch][39m src/pages/drs.astro
+[2m19:58:09[22m [34m[200][39m /drs [2m114ms[22m
+[2m19:58:47[22m [34m[200][39m /drs [2m4ms[22m
+[2m19:59:01[22m [34m[200][39m /drs [2m6ms[22m
+[2m19:59:12[22m [34m[200][39m /drs [2m4ms[22m
+[2m20:03:44[22m [34m[watch][39m src/pages/drs.astro
+[2m20:03:44[22m [34m[watch][39m src/pages/drs.astro
+[2m20:03:44[22m [34m[200][39m /drs [2m124ms[22m
+[2m20:03:57[22m [34m[watch][39m src/pages/drs.astro
+[2m20:03:57[22m [34m[watch][39m src/pages/drs.astro
+[2m20:03:58[22m [34m[200][39m /drs [2m111ms[22m
+[2m20:04:08[22m [34m[watch][39m src/pages/drs.astro
+[2m20:04:08[22m [34m[watch][39m src/pages/drs.astro
+[2m20:04:09[22m [34m[200][39m /drs [2m176ms[22m
+[2m20:04:17[22m [34m[watch][39m src/pages/drs.astro
+[2m20:04:17[22m [34m[watch][39m src/pages/drs.astro
+[2m20:04:18[22m [34m[200][39m /drs [2m123ms[22m
+[2m20:04:30[22m [34m[watch][39m src/pages/drs.astro
+[2m20:04:30[22m [34m[watch][39m src/pages/drs.astro
+[2m20:04:31[22m [34m[200][39m /drs [2m138ms[22m
+[2m20:04:48[22m [34m[watch][39m src/pages/drs.astro
+[2m20:04:48[22m [34m[watch][39m src/pages/drs.astro
+[2m20:04:50[22m [34m[200][39m /drs [2m129ms[22m
+[33m[1m20:04:52[22m [WARN] [router][39m A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/news/news-placeholder.svg`.
+
+Possible dynamic routes being matched: node_modules/@astrojs/starlight/routes/static/index.astro.
+[2m20:04:52[22m [33m[404][39m /news/news-placeholder.svg [2m9ms[22m
+[2m20:04:56[22m [34m[200][39m /drs [2m5ms[22m
+[2m20:05:00[22m [34m[watch][39m src/pages/drs.astro
+[2m20:05:00[22m [34m[watch][39m src/pages/drs.astro
+[2m20:05:00[22m [34m[200][39m /drs [2m109ms[22m
+[2m20:05:19[22m [34m[watch][39m src/pages/drs.astro
+[2m20:05:19[22m [34m[watch][39m src/pages/drs.astro
+[2m20:05:20[22m [34m[200][39m /drs [2m141ms[22m
+[2m20:05:45[22m [34m[watch][39m src/pages/drs.astro
+[2m20:05:45[22m [34m[watch][39m src/pages/drs.astro
+[2m20:05:47[22m [34m[200][39m /drs [2m133ms[22m
+[2m20:06:00[22m [34m[watch][39m src/pages/drs.astro
+[2m20:06:00[22m [34m[watch][39m src/pages/drs.astro
+[2m20:06:02[22m [34m[200][39m /drs [2m112ms[22m
+[2m20:06:21[22m [34m[200][39m /drs [2m5ms[22m
+[2m20:06:36[22m [34m[200][39m /drs [2m6ms[22m
+[2m20:09:14[22m [34m[200][39m /drs [2m3ms[22m
+[2m20:09:26[22m [34m[200][39m /drs [2m4ms[22m
+[2m20:09:29[22m [34m[200][39m /drs [2m3ms[22m
+[2m20:09:30[22m [34m[200][39m /drs [2m3ms[22m
+[2m20:09:30[22m [34m[200][39m /drs [2m3ms[22m
+[2m20:09:31[22m [34m[200][39m /drs [2m4ms[22m
+[2m20:09:34[22m [34m[200][39m /drs [2m3ms[22m
+[2m20:10:41[22m [34m[200][39m /drs [2m3ms[22m

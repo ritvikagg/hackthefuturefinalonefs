@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="News placeholder icon">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g fill="none" stroke="#9ca3af" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="480" y="260" width="640" height="380" rx="34"/>
+    <path d="M540 570l170-190 130 140 95-110 125 160"/>
+    <circle cx="930" cy="390" r="52"/>
+  </g>
+  <text x="800" y="710" text-anchor="middle" fill="#9ca3af" font-family="Segoe UI, Arial, sans-serif" font-size="56" letter-spacing="3">
+    NO IMAGE
+  </text>
+</svg>

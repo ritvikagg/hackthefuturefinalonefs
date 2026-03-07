@@ -1,0 +1,169 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import HeroSection from '@components/sections/landing/HeroSection.astro';
+import HeroSectionAlt from '@components/sections/landing/HeroSectionAlt.astro';
+import ClientsSection from '@components/sections/landing/ClientsSection.astro';
+import SupplyChainDisruptionGraphic from '@components/sections/landing/SupplyChainDisruptionGraphic.astro';
+import FeaturesGeneral from '@components/sections/features/FeaturesGeneral.astro';
+import FeaturesNavs from '@components/sections/features/FeaturesNavs.astro';
+import TestimonialsSection from '@components/sections/testimonials/TestimonialsSection.astro';
+import featureImage from '@images/supply-loop.webp';
+import construction from '@images/construction-image.avif';
+import tools from '@images/automated-tools.avif';
+import dashboard from '@images/dashboard-image.avif';
+
+const sourceLogos = [
+  { name: 'Source 01', file: 'asdadasdasdsa.png' },
+  { name: 'Source 02', file: 'cnn.png' },
+  { name: 'Source 03', file: 'dasdasdasasdasdas.png' },
+  { name: 'Source 04', file: 'dasdasdsasadsa.png' },
+  { name: 'Source 05', file: 'asdsadasasad.png' },
+  { name: 'Source 06', file: 'sdadsads.png' },
+];
+
+const partnersData = sourceLogos.map(logo => {
+  const sizeClass =
+    logo.file === 'asdsadasasad.png'
+      ? 'mx-auto h-16 w-auto object-contain sm:h-20 lg:h-24'
+      : 'mx-auto h-12 w-auto object-contain sm:h-14 lg:h-16';
+
+  return {
+    name: logo.name,
+    icon: `<img src="/news/${logo.file}" alt="${logo.name}" class="${sizeClass}" />`,
+  };
+});
+
+const features = [
+  {
+    heading: 'Live disruption sensing',
+    content:
+      'Ingests macro news, tariff changes, supplier health, logistics delays, and geopolitical signals in one stream.',
+    svg: 'monitor',
+  },
+  {
+    heading: 'Revenue-at-risk scoring',
+    content:
+      'Quantifies exposure by supplier, lane, component family, and customer SLA impact before disruptions hit.',
+    svg: 'chart',
+  },
+  {
+    heading: 'Autonomous mitigation',
+    content:
+      'Generates contingency plans, alternate sourcing plays, and execution-ready recommendations for operations.',
+    svg: 'tools',
+  },
+  {
+    heading: 'Explainable decisions',
+    content:
+      'Every recommendation includes reasoning traces and confidence levels for fast executive sign-off.',
+    svg: 'book',
+  },
+];
+---
+
+<MainLayout>
+  <HeroSection
+    title=`Autonomous supply chain resilience with <span class="text-yellow-500 dark:text-yellow-400">Resolv DRS</span>`
+    subTitle="Detect. Simulate. Mitigate. Execute. Resolv DRS continuously monitors disruption signals and launches proactive actions before impact peaks."
+    primaryBtn="Launch DRS"
+    primaryBtnURL="/drs"
+    secondaryBtn="Explore Demo"
+    secondaryBtnURL="#"
+    withReview={false}
+  >
+    <SupplyChainDisruptionGraphic slot="heroVisual" />
+  </HeroSection>
+
+  <ClientsSection
+    title="RDS tracks leading news sources across 200+ countries and 80+ languages"
+    subTitle="Global monitoring across multilingual media and regional intelligence feeds."
+    partners={partnersData}
+  />
+
+  <div id="impact">
+    <FeaturesGeneral
+      title="Built for risk teams operating under continuous volatility"
+      subTitle="Resolv DRS gives procurement and operations teams a shared command layer for early warning, impact modeling, and mitigation execution."
+      src={featureImage}
+      alt="Resolv risk operations view"
+      features={features}
+    />
+  </div>
+
+  <div id="architecture">
+    <FeaturesNavs
+      title=`How <span class="text-yellow-500 dark:text-yellow-400">Resolv DRS</span> turns signal into action`
+      tabs={[
+        {
+          heading: 'Perception',
+          content:
+            'Aggregates tariffs, news, supplier risk signals, and logistics events into one operational timeline.',
+          svg: 'tools',
+          src: tools,
+          alt: 'Signal aggregation',
+          first: true,
+        },
+        {
+          heading: 'Risk Intelligence',
+          content:
+            'Calculates disruption probability, lead-time variance, and revenue-at-risk by product line and geography.',
+          svg: 'dashboard',
+          src: dashboard,
+          alt: 'Risk intelligence dashboard',
+          second: true,
+        },
+        {
+          heading: 'Autonomous Workflows',
+          content:
+            'Generates mitigation plans, supplier alternatives, and action-ready recommendations for execution teams.',
+          svg: 'house',
+          src: construction,
+          alt: 'Mitigation workflow system',
+        },
+      ]}
+    />
+  </div>
+
+  <div id="use-cases">
+    <TestimonialsSection
+      title="Designed for high-stakes industrial decisions"
+      subTitle="Resolv DRS helps teams reduce disruption cost and respond faster across supplier networks."
+      testimonials={[
+        {
+          content:
+            'Resolv DRS surfaced upstream risk weeks earlier than our manual process and provided mitigation actions our planners could execute immediately.',
+          author: 'Operations Lead',
+          role: 'Helios Industrial Components',
+          avatarSrc:
+            'https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80',
+        },
+      ]}
+      statistics={[
+        {
+          count: '27%',
+          description: 'estimated disruption cost reduction',
+        },
+        {
+          count: '43%',
+          description: 'faster mitigation response time',
+        },
+        {
+          count: '95%',
+          description: 'coverage on critical supplier lanes',
+        },
+        {
+          count: '24/7',
+          description: 'autonomous monitoring cycle',
+        },
+      ]}
+    />
+  </div>
+
+  <div id="contact">
+    <HeroSectionAlt
+      title="Launch Resolv DRS"
+      subTitle="Bring autonomous resilience to procurement and logistics with a deployment path built for mid-market manufacturers."
+      url="/drs"
+    />
+  </div>
+</MainLayout>
